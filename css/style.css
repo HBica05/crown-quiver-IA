@@ -1,0 +1,1013 @@
+/* ========================================
+   Crown & Quiver
+   Shared Website Styles
+======================================== */
+
+
+/* ---------- Colour Variables ---------- */
+
+:root {
+    --forest-green: #1E3A2B;
+    --green-light: #2F5D50;
+
+    --earth-brown: #8A5A44;
+
+    --blush-pink: #E8C8D0;
+    --pink-dark: #D9A6B2;
+
+    --cream: #FAF7F2;
+    --cream-dark: #F2ECE5;
+
+    --white: #FFFFFF;
+
+    --dark-text: #2C2C2C;
+    --muted-text: #6E6A65;
+
+    --border: #E8E1D9;
+
+    --shadow:
+        0 15px 35px rgba(30, 58, 43, 0.10);
+
+    --radius: 18px;
+}
+
+
+/* ---------- General Reset ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    color: var(--dark-text);
+
+    background-color: var(--cream);
+
+    line-height: 1.7;
+}
+
+
+img {
+    max-width: 100%;
+
+    display: block;
+}
+
+
+a {
+    color: inherit;
+}
+
+
+.container {
+    width: min(1160px, 92%);
+
+    margin: 0 auto;
+}
+
+
+
+/* ========================================
+   Typography
+======================================== */
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    color: var(--forest-green);
+
+    line-height: 1.1;
+}
+
+
+h1 {
+    font-size:
+        clamp(
+            3.5rem,
+            8vw,
+            6.5rem
+        );
+}
+
+
+h2 {
+    font-size:
+        clamp(
+            2.4rem,
+            5vw,
+            4rem
+        );
+}
+
+
+h3 {
+    font-size: 1.8rem;
+}
+
+
+p {
+    margin-top: 0;
+}
+
+
+.section-label,
+.eyebrow {
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.18em;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    color: var(--earth-brown);
+}
+
+
+
+/* ========================================
+   Navigation
+======================================== */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(
+            250,
+            247,
+            242,
+            0.96
+        );
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.nav-wrapper {
+
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+.logo-text {
+
+    text-decoration: none;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.8rem;
+
+    font-weight: 700;
+
+    color: var(--forest-green);
+
+    white-space: nowrap;
+}
+
+
+.site-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 5px;
+
+    flex-wrap: wrap;
+}
+
+
+.site-nav a {
+
+    text-decoration: none;
+
+    padding: 8px 9px;
+
+    border-radius: 30px;
+
+    font-size: 0.85rem;
+
+    font-weight: 500;
+
+    transition: 0.25s;
+}
+
+
+.site-nav a:hover,
+.site-nav a.active {
+
+    background-color: #EFE8DF;
+
+    color: var(--forest-green);
+}
+
+
+.site-nav .nav-button {
+
+    background-color:
+        var(--forest-green);
+
+    color: var(--white);
+
+    padding-left: 16px;
+
+    padding-right: 16px;
+}
+
+
+.site-nav .nav-button:hover {
+
+    background-color:
+        var(--earth-brown);
+
+    color: white;
+}
+
+
+.menu-toggle {
+
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    color: var(--forest-green);
+
+    font-size: 1.6rem;
+
+    cursor: pointer;
+}
+
+
+
+/* ========================================
+   Hero
+======================================== */
+
+.hero {
+
+    min-height: 78vh;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(30, 58, 43, 0.96),
+            rgba(30, 58, 43, 0.78),
+            rgba(30, 58, 43, 0.45)
+        ),
+
+        linear-gradient(
+            135deg,
+            #1E3A2B,
+            #4D6A58
+        );
+}
+
+
+.hero-content {
+
+    padding-top: 90px;
+
+    padding-bottom: 90px;
+}
+
+
+.hero h1 {
+
+    color: white;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+
+    color: var(--blush-pink);
+}
+
+
+.eyebrow {
+
+    color: var(--blush-pink);
+}
+
+
+.hero-description {
+
+    max-width: 680px;
+
+    font-size: 1.1rem;
+
+    color: #F6EFEB;
+}
+
+
+.hero-buttons {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+
+/* ========================================
+   Buttons
+======================================== */
+
+.btn {
+
+    min-height: 48px;
+
+    padding:
+        12px
+        21px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    border:
+        1px solid transparent;
+
+    transition:
+        transform 0.25s,
+        background-color 0.25s,
+        color 0.25s;
+}
+
+
+.btn:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+
+.btn-primary {
+
+    background:
+        var(--forest-green);
+
+    color: white;
+}
+
+
+.btn-primary:hover {
+
+    background:
+        var(--earth-brown);
+}
+
+
+.btn-outline-light {
+
+    border-color: white;
+
+    color: white;
+}
+
+
+.btn-outline-light:hover {
+
+    background:
+        white;
+
+    color:
+        var(--forest-green);
+}
+
+
+.btn-outline-dark {
+
+    border-color:
+        var(--forest-green);
+
+    color:
+        var(--forest-green);
+}
+
+
+.btn-outline-dark:hover {
+
+    background:
+        var(--forest-green);
+
+    color: white;
+}
+
+
+.btn-pink {
+
+    background:
+        var(--blush-pink);
+
+    color:
+        var(--forest-green);
+}
+
+
+.btn-pink:hover {
+
+    background: white;
+}
+
+
+.text-link {
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    color:
+        var(--forest-green);
+}
+
+
+.text-link:hover {
+
+    color:
+        var(--earth-brown);
+}
+
+
+
+/* ========================================
+   General Sections
+======================================== */
+
+.section {
+
+    padding:
+        85px 0;
+}
+
+
+.section-alt {
+
+    background:
+        var(--cream-dark);
+}
+
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin:
+        0 auto 40px;
+
+    text-align: center;
+}
+
+
+.two-column {
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        0.9fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+
+/* ========================================
+   Quote Card
+======================================== */
+
+.quote-card {
+
+    background:
+        white;
+
+    padding: 38px;
+
+    border-radius:
+        var(--radius);
+
+    border:
+        1px solid var(--border);
+
+    border-left:
+        6px solid
+        var(--blush-pink);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.quote-card p {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 2rem;
+
+    line-height: 1.25;
+
+    color:
+        var(--forest-green);
+}
+
+
+.quote-card span {
+
+    color:
+        var(--earth-brown);
+}
+
+
+
+/* ========================================
+   Cards
+======================================== */
+
+.card-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 22px;
+}
+
+
+.info-card,
+.news-card,
+.event-card {
+
+    padding: 30px;
+
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        transform 0.25s;
+}
+
+
+.info-card:hover,
+.news-card:hover {
+
+    transform:
+        translateY(-6px);
+}
+
+
+.card-number {
+
+    color:
+        var(--pink-dark);
+
+    font-weight: 600;
+}
+
+
+.news-card span,
+.event-tag {
+
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.14em;
+
+    color:
+        var(--earth-brown);
+
+    font-weight: 600;
+}
+
+
+.event-details {
+
+    color:
+        var(--earth-brown);
+
+    font-weight: 600;
+}
+
+
+.center {
+
+    margin-top: 35px;
+
+    text-align: center;
+}
+
+
+
+/* ========================================
+   Membership Section
+======================================== */
+
+.membership-section {
+
+    background:
+        var(--forest-green);
+
+    color: white;
+
+    padding:
+        65px 0;
+}
+
+
+.membership-section h2 {
+
+    color: white;
+}
+
+
+.membership-section p {
+
+    max-width: 720px;
+}
+
+
+.membership-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+.light-label {
+
+    color:
+        var(--blush-pink);
+}
+
+
+
+/* ========================================
+   Contact Preview
+======================================== */
+
+.contact-preview {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+.contact-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+
+/* ========================================
+   Footer
+======================================== */
+
+.site-footer {
+
+    padding:
+        60px 0 25px;
+
+    background:
+        #14281E;
+
+    color:
+        #ECE6DF;
+}
+
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 45px;
+}
+
+
+.footer-logo {
+
+    color: white;
+
+    font-size: 2rem;
+}
+
+
+.site-footer h3 {
+
+    color: white;
+
+    font-size: 1.4rem;
+}
+
+
+.site-footer a {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    text-decoration: none;
+
+    color:
+        #ECE6DF;
+}
+
+
+.site-footer a:hover {
+
+    color:
+        var(--blush-pink);
+}
+
+
+.footer-bottom {
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    font-size: 0.85rem;
+
+    color:
+        #CBC1B8;
+}
+
+
+
+/* ========================================
+   Back to Top
+======================================== */
+
+.back-to-top {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background:
+        var(--blush-pink);
+
+    color:
+        var(--forest-green);
+
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        var(--shadow);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.25s;
+}
+
+
+.back-to-top.show {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+
+/* ========================================
+   Responsive Design
+======================================== */
+
+@media (max-width: 1050px) {
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+
+    .site-nav {
+
+        position: absolute;
+
+        top: 82px;
+
+        left: 0;
+
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        background:
+            var(--cream);
+
+        padding:
+            20px 5%;
+
+        border-bottom:
+            1px solid
+            var(--border);
+    }
+
+
+    .site-nav.open {
+
+        display: flex;
+    }
+
+
+    .site-nav a {
+
+        text-align: center;
+
+        padding: 11px;
+    }
+
+}
+
+
+@media (max-width: 820px) {
+
+    .two-column,
+    .card-grid,
+    .footer-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .membership-wrapper,
+    .contact-preview,
+    .footer-bottom {
+
+        flex-direction: column;
+
+        align-items:
+            flex-start;
+    }
+
+
+    .section {
+
+        padding:
+            60px 0;
+    }
+
+
+    .hero {
+
+        min-height: 70vh;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .hero h1 {
+
+        font-size:
+            3.4rem;
+    }
+
+
+    .hero-buttons,
+    .contact-buttons {
+
+        flex-direction:
+            column;
+    }
+
+
+    .btn {
+
+        width: 100%;
+    }
+
+}

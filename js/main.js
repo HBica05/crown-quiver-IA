@@ -7,46 +7,29 @@ document.addEventListener(
         ======================================== */
 
         const menuToggle =
-            document.querySelector(
-                ".menu-toggle"
-            );
+            document.querySelector(".menu-toggle");
 
         const navigation =
-            document.querySelector(
-                ".site-nav"
-            );
+            document.querySelector(".site-nav");
 
         const backToTop =
-            document.querySelector(
-                ".back-to-top"
-            );
+            document.querySelector(".back-to-top");
 
 
         /* ========================================
            Mobile Navigation
         ======================================== */
 
-        if (
-            menuToggle &&
-            navigation
-        ) {
+        if (menuToggle && navigation) {
 
             menuToggle.addEventListener(
                 "click",
                 function () {
 
-                    navigation
-                        .classList
-                        .toggle("open");
-
+                    navigation.classList.toggle("open");
 
                     const isOpen =
-                        navigation
-                            .classList
-                            .contains(
-                                "open"
-                            );
-
+                        navigation.classList.contains("open");
 
                     menuToggle.setAttribute(
                         "aria-expanded",
@@ -66,17 +49,12 @@ document.addEventListener(
                             "click",
                             function () {
 
-                                navigation
-                                    .classList
-                                    .remove(
-                                        "open"
-                                    );
+                                navigation.classList.remove("open");
 
-                                menuToggle
-                                    .setAttribute(
-                                        "aria-expanded",
-                                        "false"
-                                    );
+                                menuToggle.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
 
                             }
                         );
@@ -95,22 +73,13 @@ document.addEventListener(
 
             function updateBackToTop() {
 
-                if (
-                    window.scrollY >
-                    500
-                ) {
+                if (window.scrollY > 500) {
 
-                    backToTop
-                        .classList
-                        .add("show");
+                    backToTop.classList.add("show");
 
-                }
+                } else {
 
-                else {
-
-                    backToTop
-                        .classList
-                        .remove("show");
+                    backToTop.classList.remove("show");
 
                 }
 
@@ -131,12 +100,8 @@ document.addEventListener(
                 function () {
 
                     window.scrollTo({
-
                         top: 0,
-
-                        behavior:
-                            "smooth"
-
+                        behavior: "smooth"
                     });
 
                 }
@@ -150,8 +115,7 @@ document.addEventListener(
         ======================================== */
 
         const currentPage =
-            window.location
-                .pathname
+            window.location.pathname
                 .split("/")
                 .pop()
             ||
@@ -168,36 +132,21 @@ document.addEventListener(
             function (link) {
 
                 const linkPage =
-                    link.getAttribute(
-                        "href"
+                    link.getAttribute("href");
+
+
+                if (linkPage === currentPage) {
+
+                    navigationLinks.forEach(
+                        function (navLink) {
+
+                            navLink.classList.remove("active");
+
+                        }
                     );
 
 
-                if (
-                    linkPage ===
-                    currentPage
-                ) {
-
-                    navigationLinks
-                        .forEach(
-                            function (
-                                navLink
-                            ) {
-
-                                navLink
-                                    .classList
-                                    .remove(
-                                        "active"
-                                    );
-
-                            }
-                        );
-
-
-                    link.classList
-                        .add(
-                            "active"
-                        );
+                    link.classList.add("active");
 
                 }
 
@@ -252,11 +201,7 @@ document.addEventListener(
             }
 
 
-            detailsModal
-                .classList
-                .remove(
-                    "show"
-                );
+            detailsModal.classList.remove("show");
 
 
             detailsModal.setAttribute(
@@ -265,8 +210,7 @@ document.addEventListener(
             );
 
 
-            document.body.style
-                .overflow = "";
+            document.body.style.overflow = "";
 
         }
 
@@ -285,11 +229,8 @@ document.addEventListener(
 
                             if (modalTitle) {
 
-                                modalTitle
-                                    .textContent =
-                                    button.dataset
-                                        .title
-                                    ||
+                                modalTitle.textContent =
+                                    button.dataset.title ||
                                     "Details";
 
                             }
@@ -297,11 +238,8 @@ document.addEventListener(
 
                             if (modalTime) {
 
-                                modalTime
-                                    .textContent =
-                                    button.dataset
-                                        .time
-                                    ||
+                                modalTime.textContent =
+                                    button.dataset.time ||
                                     "";
 
                             }
@@ -309,11 +247,8 @@ document.addEventListener(
 
                             if (modalLocation) {
 
-                                modalLocation
-                                    .textContent =
-                                    button.dataset
-                                        .location
-                                    ||
+                                modalLocation.textContent =
+                                    button.dataset.location ||
                                     "";
 
                             }
@@ -321,32 +256,25 @@ document.addEventListener(
 
                             if (modalDesc) {
 
-                                modalDesc
-                                    .textContent =
-                                    button.dataset
-                                        .desc
-                                    ||
+                                modalDesc.textContent =
+                                    button.dataset.desc ||
                                     "";
 
                             }
 
 
-                            detailsModal
-                                .classList
-                                .add(
-                                    "show"
-                                );
+                            detailsModal.classList.add(
+                                "show"
+                            );
 
 
-                            detailsModal
-                                .setAttribute(
-                                    "aria-hidden",
-                                    "false"
-                                );
+                            detailsModal.setAttribute(
+                                "aria-hidden",
+                                "false"
+                            );
 
 
-                            document.body.style
-                                .overflow =
+                            document.body.style.overflow =
                                 "hidden";
 
                         }
@@ -365,11 +293,10 @@ document.addEventListener(
             detailsModal
         ) {
 
-            closeModalBtn
-                .addEventListener(
-                    "click",
-                    closeDetailsModal
-                );
+            closeModalBtn.addEventListener(
+                "click",
+                closeDetailsModal
+            );
 
         }
 
@@ -378,22 +305,21 @@ document.addEventListener(
 
         if (detailsModal) {
 
-            detailsModal
-                .addEventListener(
-                    "click",
-                    function (event) {
+            detailsModal.addEventListener(
+                "click",
+                function (event) {
 
-                        if (
-                            event.target ===
-                            detailsModal
-                        ) {
+                    if (
+                        event.target ===
+                        detailsModal
+                    ) {
 
-                            closeDetailsModal();
-
-                        }
+                        closeDetailsModal();
 
                     }
-                );
+
+                }
+            );
 
         }
 
@@ -405,16 +331,11 @@ document.addEventListener(
             function (event) {
 
                 if (
-                    event.key ===
-                    "Escape"
-                    &&
-                    detailsModal
-                    &&
-                    detailsModal
-                        .classList
-                        .contains(
-                            "show"
-                        )
+                    event.key === "Escape" &&
+                    detailsModal &&
+                    detailsModal.classList.contains(
+                        "show"
+                    )
                 ) {
 
                     closeDetailsModal();
@@ -423,6 +344,373 @@ document.addEventListener(
 
             }
         );
+
+
+        /* ========================================
+           Registration Form
+        ======================================== */
+
+        const registrationForm =
+            document.getElementById(
+                "registrationForm"
+            );
+
+
+        if (registrationForm) {
+
+            const registrationMessage =
+                document.getElementById(
+                    "registrationMessage"
+                );
+
+
+            registrationForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const name =
+                        document
+                            .getElementById(
+                                "registrationName"
+                            )
+                            .value
+                            .trim();
+
+
+                    const tp =
+                        document
+                            .getElementById(
+                                "registrationTP"
+                            )
+                            .value
+                            .trim();
+
+
+                    const email =
+                        document
+                            .getElementById(
+                                "registrationEmail"
+                            )
+                            .value
+                            .trim();
+
+
+                    const phone =
+                        document
+                            .getElementById(
+                                "registrationPhone"
+                            )
+                            .value
+                            .trim();
+
+
+                    const programme =
+                        document
+                            .getElementById(
+                                "registrationProgramme"
+                            )
+                            .value
+                            .trim();
+
+
+                    const experience =
+                        document
+                            .getElementById(
+                                "registrationExperience"
+                            )
+                            .value;
+
+
+                    const reason =
+                        document
+                            .getElementById(
+                                "registrationReason"
+                            )
+                            .value
+                            .trim();
+
+
+                    const agreement =
+                        document
+                            .getElementById(
+                                "registrationAgreement"
+                            )
+                            .checked;
+
+
+                    if (
+                        name === "" ||
+                        tp === "" ||
+                        email === "" ||
+                        phone === "" ||
+                        programme === "" ||
+                        experience === "" ||
+                        reason === "" ||
+                        !agreement
+                    ) {
+
+                        registrationMessage.textContent =
+                            "Please complete all required fields.";
+
+                        registrationMessage.className =
+                            "form-message error";
+
+                        return;
+
+                    }
+
+
+                    if (!email.includes("@")) {
+
+                        registrationMessage.textContent =
+                            "Please enter a valid email address.";
+
+                        registrationMessage.className =
+                            "form-message error";
+
+                        return;
+
+                    }
+
+
+                    registrationMessage.textContent =
+                        "Registration submitted successfully!";
+
+                    registrationMessage.className =
+                        "form-message success";
+
+
+                    registrationForm.reset();
+
+                }
+            );
+
+        }
+
+
+        /* ========================================
+           Enquiry Form
+        ======================================== */
+
+        const enquiryForm =
+            document.getElementById(
+                "enquiryForm"
+            );
+
+
+        if (enquiryForm) {
+
+            const enquiryStatus =
+                document.getElementById(
+                    "enquiryMessageStatus"
+                );
+
+
+            enquiryForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const name =
+                        document
+                            .getElementById(
+                                "enquiryName"
+                            )
+                            .value
+                            .trim();
+
+
+                    const email =
+                        document
+                            .getElementById(
+                                "enquiryEmail"
+                            )
+                            .value
+                            .trim();
+
+
+                    const subject =
+                        document
+                            .getElementById(
+                                "enquirySubject"
+                            )
+                            .value
+                            .trim();
+
+
+                    const category =
+                        document
+                            .getElementById(
+                                "enquiryCategory"
+                            )
+                            .value;
+
+
+                    const message =
+                        document
+                            .getElementById(
+                                "enquiryMessage"
+                            )
+                            .value
+                            .trim();
+
+
+                    if (
+                        name === "" ||
+                        email === "" ||
+                        subject === "" ||
+                        category === "" ||
+                        message === ""
+                    ) {
+
+                        enquiryStatus.textContent =
+                            "Please complete all required fields.";
+
+                        enquiryStatus.className =
+                            "form-message error";
+
+                        return;
+
+                    }
+
+
+                    if (!email.includes("@")) {
+
+                        enquiryStatus.textContent =
+                            "Please enter a valid email address.";
+
+                        enquiryStatus.className =
+                            "form-message error";
+
+                        return;
+
+                    }
+
+
+                    enquiryStatus.textContent =
+                        "Your enquiry has been submitted successfully!";
+
+                    enquiryStatus.className =
+                        "form-message success";
+
+
+                    enquiryForm.reset();
+
+                }
+            );
+
+        }
+
+
+        /* ========================================
+           Feedback Form
+        ======================================== */
+
+        const feedbackForm =
+            document.getElementById(
+                "feedbackForm"
+            );
+
+
+        if (feedbackForm) {
+
+            const feedbackMessage =
+                document.getElementById(
+                    "feedbackMessage"
+                );
+
+
+            feedbackForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const name =
+                        document
+                            .getElementById(
+                                "feedbackName"
+                            )
+                            .value
+                            .trim();
+
+
+                    const email =
+                        document
+                            .getElementById(
+                                "feedbackEmail"
+                            )
+                            .value
+                            .trim();
+
+
+                    const rating =
+                        document
+                            .getElementById(
+                                "feedbackRating"
+                            )
+                            .value;
+
+
+                    const comments =
+                        document
+                            .getElementById(
+                                "feedbackComments"
+                            )
+                            .value
+                            .trim();
+
+
+                    if (
+                        name === "" ||
+                        email === "" ||
+                        rating === "" ||
+                        comments === ""
+                    ) {
+
+                        feedbackMessage.textContent =
+                            "Please complete all required fields.";
+
+                        feedbackMessage.className =
+                            "form-message error";
+
+                        return;
+
+                    }
+
+
+                    if (!email.includes("@")) {
+
+                        feedbackMessage.textContent =
+                            "Please enter a valid email address.";
+
+                        feedbackMessage.className =
+                            "form-message error";
+
+                        return;
+
+                    }
+
+
+                    feedbackMessage.textContent =
+                        "Thank you for your feedback!";
+
+                    feedbackMessage.className =
+                        "form-message success";
+
+
+                    feedbackForm.reset();
+
+                }
+            );
+
+        }
 
     }
 );

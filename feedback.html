@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback | Crown & Quiver</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Shared JavaScript -->
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+
+        <div class="container nav-wrapper">
+
+            <a href="index.html" class="logo-text">
+                Crown & Quiver
+            </a>
+
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <nav class="site-nav">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="mission.html">Mission</a>
+                <a href="rules.html">Rules</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+                <a href="news.html">News</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="membership.html">Membership</a>
+                <a href="contact.html">Contact</a>
+
+                <a href="registration.html" class="nav-button">
+                    Join Us
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- Feedback Hero -->
+        <section class="page-hero">
+
+            <div class="container page-hero-centered">
+
+                <p class="eyebrow">
+                    Your Voice Matters
+                </p>
+
+                <h1>
+                    Share Your Experience
+                </h1>
+
+                <p class="page-hero-description">
+                    We value your feedback and suggestions.
+                    Help us improve the Crown & Quiver Archery
+                    Club experience for our members.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Feedback Form -->
+        <section class="section">
+
+            <div class="container form-page-container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        Tell Us What You Think
+                    </p>
+
+                    <h2>
+                        Feedback Form
+                    </h2>
+
+                    <p>
+                        Share your experience, rating and suggestions
+                        with the Crown & Quiver team.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="feedbackForm"
+                    class="club-form"
+                    novalidate
+                >
+
+                    <div class="form-grid">
+
+                        <!-- Full Name -->
+                        <div class="form-group">
+
+                            <label for="feedbackName">
+                                Full Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="feedbackName"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Email -->
+                        <div class="form-group">
+
+                            <label for="feedbackEmail">
+                                Email Address *
+                            </label>
+
+                            <input
+                                type="email"
+                                id="feedbackEmail"
+                                name="email"
+                                placeholder="Enter your email address"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Rating -->
+                        <div class="form-group">
+
+                            <label for="feedbackRating">
+                                Rating *
+                            </label>
+
+                            <select
+                                id="feedbackRating"
+                                name="rating"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Rating
+                                </option>
+
+                                <option value="1">
+                                    1 - Poor
+                                </option>
+
+                                <option value="2">
+                                    2 - Fair
+                                </option>
+
+                                <option value="3">
+                                    3 - Good
+                                </option>
+
+                                <option value="4">
+                                    4 - Very Good
+                                </option>
+
+                                <option value="5">
+                                    5 - Excellent
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Favourite Activity -->
+                        <div class="form-group">
+
+                            <label for="feedbackActivity">
+                                Favourite Activity
+                            </label>
+
+                            <input
+                                type="text"
+                                id="feedbackActivity"
+                                name="activity"
+                                placeholder="Example: Training Sessions"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Comments -->
+                    <div class="form-group">
+
+                        <label for="feedbackComments">
+                            Comments *
+                        </label>
+
+                        <textarea
+                            id="feedbackComments"
+                            name="comments"
+                            rows="6"
+                            placeholder="Share your feedback or suggestions"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Status -->
+                    <p
+                        id="feedbackMessage"
+                        class="form-message"
+                        aria-live="polite"
+                    ></p>
+
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="btn btn-primary form-submit"
+                    >
+                        Submit Feedback
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h2 class="footer-logo">
+                    Crown & Quiver
+                </h2>
+
+                <p>
+                    APU Archery Club<br>
+                    Asia Pacific University
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Explore</h3>
+
+                <a href="about.html">About</a>
+                <a href="activities.html">Activities</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="membership.html">Membership</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Connect</h3>
+
+                <a href="contact.html">Contact</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="registration.html">Registration</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 Crown & Quiver
+            </p>
+
+            <p>
+                AINT012-4-1 Internet Applications
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Back to Top -->
+    <button
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+</body>
+
+</html>

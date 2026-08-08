@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration | Crown & Quiver</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Shared JavaScript -->
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+
+        <div class="container nav-wrapper">
+
+            <a href="index.html" class="logo-text">
+                Crown & Quiver
+            </a>
+
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <nav class="site-nav">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="mission.html">Mission</a>
+                <a href="rules.html">Rules</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+                <a href="news.html">News</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="membership.html">Membership</a>
+                <a href="contact.html">Contact</a>
+
+                <a
+                    href="registration.html"
+                    class="nav-button"
+                >
+                    Join Us
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- Registration Hero -->
+        <section class="page-hero">
+
+            <div class="container page-hero-centered">
+
+                <p class="eyebrow">
+                    Join Crown & Quiver
+                </p>
+
+                <h1>
+                    Membership Registration
+                </h1>
+
+                <p class="page-hero-description">
+                    Complete the registration form below to apply
+                    for membership with the Crown & Quiver
+                    Archery Club.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Registration Form -->
+        <section class="section">
+
+            <div class="container form-page-container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        Membership Application
+                    </p>
+
+                    <h2>
+                        Registration Form
+                    </h2>
+
+                    <p>
+                        Please provide your details below.
+                        Fields marked with * are required.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="registrationForm"
+                    class="club-form"
+                    novalidate
+                >
+
+                    <div class="form-grid">
+
+                        <!-- Full Name -->
+                        <div class="form-group">
+
+                            <label for="registrationName">
+                                Full Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="registrationName"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- TP Number -->
+                        <div class="form-group">
+
+                            <label for="registrationTP">
+                                TP Number *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="registrationTP"
+                                name="tp"
+                                placeholder="Example: TP012345"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- APU Email -->
+                        <div class="form-group">
+
+                            <label for="registrationEmail">
+                                APU Email *
+                            </label>
+
+                            <input
+                                type="email"
+                                id="registrationEmail"
+                                name="email"
+                                placeholder="example@mail.apu.edu.my"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Phone -->
+                        <div class="form-group">
+
+                            <label for="registrationPhone">
+                                Phone Number *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="registrationPhone"
+                                name="phone"
+                                placeholder="+60..."
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Programme -->
+                        <div class="form-group">
+
+                            <label for="registrationProgramme">
+                                Programme *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="registrationProgramme"
+                                name="programme"
+                                placeholder="Your programme of study"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Experience -->
+                        <div class="form-group">
+
+                            <label for="registrationExperience">
+                                Archery Experience *
+                            </label>
+
+                            <select
+                                id="registrationExperience"
+                                name="experience"
+                                required
+                            >
+
+                                <option value="">
+                                    Select your experience
+                                </option>
+
+                                <option value="Beginner">
+                                    Beginner
+                                </option>
+
+                                <option value="Intermediate">
+                                    Intermediate
+                                </option>
+
+                                <option value="Advanced">
+                                    Advanced
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Reason -->
+                    <div class="form-group">
+
+                        <label for="registrationReason">
+                            Why do you want to join? *
+                        </label>
+
+                        <textarea
+                            id="registrationReason"
+                            name="reason"
+                            rows="6"
+                            placeholder="Tell us why you would like to join Crown & Quiver"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Agreement -->
+                    <div class="form-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="registrationAgreement"
+                            required
+                        >
+
+                        <label for="registrationAgreement">
+                            I agree to follow the club rules,
+                            safety regulations and responsible
+                            equipment-use guidelines.
+                        </label>
+
+                    </div>
+
+
+                    <!-- Form Message -->
+                    <p
+                        id="registrationMessage"
+                        class="form-message"
+                        aria-live="polite"
+                    ></p>
+
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="btn btn-primary form-submit"
+                    >
+                        Submit Registration
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h2 class="footer-logo">
+                    Crown & Quiver
+                </h2>
+
+                <p>
+                    APU Archery Club<br>
+                    Asia Pacific University
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Explore</h3>
+
+                <a href="about.html">About</a>
+                <a href="activities.html">Activities</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="membership.html">Membership</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Connect</h3>
+
+                <a href="contact.html">Contact</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="registration.html">Registration</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 Crown & Quiver
+            </p>
+
+            <p>
+                AINT012-4-1 Internet Applications
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Back to Top -->
+    <button
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+</body>
+
+</html>

@@ -199,6 +199,26 @@ p {
 }
 
 
+/* ---------- Logo Image ---------- */
+
+.brand-with-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.site-logo {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand-with-logo span {
+    display: inline-block;
+}
+
+
 .site-nav {
 
     display: flex;
@@ -1039,6 +1059,15 @@ p {
 
 
 @media (max-width: 560px) {
+
+    .site-logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand-with-logo {
+        gap: 7px;
+    }
 
     .hero h1 {
 

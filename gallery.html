@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Crown & Quiver</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Shared JavaScript -->
+    <script defer src="js/main.js"></script>
+
+    <!-- Gallery JavaScript -->
+    <script defer src="js/gallery.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+
+        <div class="container nav-wrapper">
+
+            <a
+                href="index.html"
+                class="logo-text"
+            >
+                Crown & Quiver
+            </a>
+
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <nav class="site-nav">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="mission.html">Mission</a>
+                <a href="rules.html">Rules</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+                <a href="news.html">News</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="membership.html">Membership</a>
+                <a href="contact.html">Contact</a>
+
+                <a
+                    href="registration.html"
+                    class="nav-button"
+                >
+                    Join Us
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- Gallery Hero -->
+        <section class="page-hero">
+
+            <div class="container page-hero-centered">
+
+                <p class="eyebrow">
+                    Crown & Quiver
+                </p>
+
+                <h1>
+                    Photo Gallery
+                </h1>
+
+                <p class="page-hero-description">
+                    Explore illustrative moments inspired by
+                    archery training, teamwork, competitions
+                    and the Crown & Quiver community.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Featured Gallery -->
+        <section class="section gallery-featured-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        Featured
+                    </p>
+
+                    <h2>
+                        Gallery Showcase
+                    </h2>
+
+                    <p>
+                        Browse a selection of archery-inspired
+                        images representing the experiences
+                        planned for Crown & Quiver members.
+                    </p>
+
+                </div>
+
+
+                <div class="gallery-slider">
+
+                    <button
+                        type="button"
+                        class="gallery-slider-btn"
+                        id="galleryPrev"
+                        aria-label="Previous featured image"
+                    >
+                        ‹
+                    </button>
+
+
+                    <div class="gallery-featured-card">
+
+                        <img
+                            id="featuredGalleryImage"
+                            src="https://images.unsplash.com/photo-1528037316938-a1faa7812673?q=80&w=1200&auto=format&fit=crop"
+                            alt="Archery practice session"
+                        >
+
+                        <div class="gallery-featured-caption">
+
+                            <h3 id="featuredGalleryTitle">
+                                Recurve Practice
+                            </h3>
+
+                            <p id="featuredGalleryCaption">
+                                Illustrative archery training and
+                                technique development.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="gallery-slider-btn"
+                        id="galleryNext"
+                        aria-label="Next featured image"
+                    >
+                        ›
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="gallery-dots"
+                    id="galleryDots"
+                    aria-label="Featured gallery navigation"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Main Gallery -->
+        <section class="section section-alt">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        Our Collection
+                    </p>
+
+                    <h2>
+                        Archery Moments
+                    </h2>
+
+                    <p>
+                        Select any image to view it in a larger
+                        lightbox.
+                    </p>
+
+                </div>
+
+
+                <div class="gallery-page-grid">
+
+                    <!-- 01 -->
+                    <figure
+                        class="gallery-item"
+                        data-caption="Beginner Training Session"
+                    >
+
+                        <img
+                            src="https://plus.unsplash.com/premium_photo-1718315902794-5c3967f8fb53?q=80&w=1170&auto=format&fit=crop"
+                            alt="Beginner archery training"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            <strong>Beginner Training</strong>
+                            <span>Training</span>
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- 02 -->
+                    <figure
+                        class="gallery-item"
+                        data-caption="Archery Team Practice"
+                    >
+
+                        <img
+                            src="https://plus.unsplash.com/premium_photo-1718386003778-68051fdaf312?q=80&w=1170&auto=format&fit=crop"
+                            alt="Archery team practice"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            <strong>Team Practice</strong>
+                            <span>Training</span>
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- 03 -->
+                    <figure
+                        class="gallery-item"
+                        data-caption="Form and Release Practice"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1781031324767-222474028ced?q=80&w=1170&auto=format&fit=crop"
+                            alt="Archer practising shooting form"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            <strong>Form & Release</strong>
+                            <span>Skills</span>
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- 04 -->
+                    <figure
+                        class="gallery-item"
+                        data-caption="Competition Preparation"
+                    >
+
+                        <img
+                            src="https://plus.unsplash.com/premium_photo-1718386003348-8abb366dceb7?q=80&w=1170&auto=format&fit=crop"
+                            alt="Archery competition preparation"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            <strong>Competition Preparation</strong>
+                            <span>Competition</span>
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- 05 -->
+                    <figure
+                        class="gallery-item"
+                        data-caption="Outdoor Target Practice"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1511067007398-7e4b90cfa4bc?auto=format&fit=crop&q=80&w=1170"
+                            alt="Outdoor archery target practice"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            <strong>Target Practice</strong>
+                            <span>Training</span>
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- 06 -->
+                    <figure
+                        class="gallery-item"
+                        data-caption="Archery Technique Workshop"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1709568859072-17c8748a3f19?q=80&w=1170&auto=format&fit=crop"
+                            alt="Archery technique workshop"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            <strong>Technique Workshop</strong>
+                            <span>Workshop</span>
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- 07 -->
+                    <figure
+                        class="gallery-item"
+                        data-caption="Friendly Club Competition"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1712350840799-eed8c91053ce?q=80&w=1170&auto=format&fit=crop"
+                            alt="Friendly archery competition"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            <strong>Friendly Competition</strong>
+                            <span>Competition</span>
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- 08 -->
+                    <figure
+                        class="gallery-item"
+                        data-caption="Beginner Archery Experience"
+                    >
+
+                        <img
+                            src="https://plus.unsplash.com/premium_photo-1718315735010-a382235a28b7?q=80&w=1170&auto=format&fit=crop"
+                            alt="Beginner archery experience"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            <strong>Beginner Experience</strong>
+                            <span>Beginners</span>
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- 09 -->
+                    <figure
+                        class="gallery-item"
+                        data-caption="Club Championship Preparation"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1781031324805-b7b00cd8fa3a?q=80&w=1170&auto=format&fit=crop"
+                            alt="Archery championship preparation"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            <strong>Championship Preparation</strong>
+                            <span>Competition</span>
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- 10 -->
+                    <figure
+                        class="gallery-item"
+                        data-caption="Focus and Precision"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1510925758641-869d353cecc7?q=80&w=1170&auto=format&fit=crop"
+                            alt="Archer focusing on target"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            <strong>Focus & Precision</strong>
+                            <span>Skills</span>
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- 11 -->
+                    <figure
+                        class="gallery-item"
+                        data-caption="Archery Equipment Practice"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1170&auto=format&fit=crop"
+                            alt="Archery equipment and practice"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            <strong>Equipment Practice</strong>
+                            <span>Equipment</span>
+                        </figcaption>
+
+                    </figure>
+
+
+                    <!-- 12 -->
+                    <figure
+                        class="gallery-item"
+                        data-caption="Team Building Through Archery"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=1170&auto=format&fit=crop"
+                            alt="Team building activity"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            <strong>Team Building</strong>
+                            <span>Community</span>
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Gallery Lightbox -->
+    <div
+        class="gallery-lightbox"
+        id="galleryLightbox"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Gallery image preview"
+    >
+
+        <button
+            type="button"
+            class="gallery-lightbox-close"
+            id="galleryLightboxClose"
+            aria-label="Close gallery image"
+        >
+            ×
+        </button>
+
+
+        <button
+            type="button"
+            class="gallery-lightbox-nav gallery-lightbox-prev"
+            id="lightboxPrev"
+            aria-label="Previous gallery image"
+        >
+            ‹
+        </button>
+
+
+        <div class="gallery-lightbox-content">
+
+            <img
+                id="galleryLightboxImage"
+                src=""
+                alt=""
+            >
+
+            <p id="galleryLightboxCaption"></p>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="gallery-lightbox-nav gallery-lightbox-next"
+            id="lightboxNext"
+            aria-label="Next gallery image"
+        >
+            ›
+        </button>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h2 class="footer-logo">
+                    Crown & Quiver
+                </h2>
+
+                <p>
+                    APU Archery Club<br>
+                    Asia Pacific University
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Explore</h3>
+
+                <a href="about.html">About</a>
+                <a href="activities.html">Activities</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="membership.html">Membership</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Connect</h3>
+
+                <a href="contact.html">Contact</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="registration.html">Registration</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 Crown & Quiver
+            </p>
+
+            <p>
+                AINT012-4-1 Internet Applications
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Back to Top -->
+    <button
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+</body>
+
+</html>

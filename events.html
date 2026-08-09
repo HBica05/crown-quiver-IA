@@ -1,243 +1,637 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Events | Crown &amp; Quiver</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<!-- Shared CSS -->
-<link href="css/style.css" rel="stylesheet"/>
-<!-- Shared JavaScript -->
-<script defer="" src="js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events | Crown & Quiver</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Shared JavaScript -->
+    <script defer src="js/main.js"></script>
 </head>
+
 <body>
-<!-- Navigation -->
-<header class="site-header">
-<div class="container nav-wrapper">
-<a class="logo-text" href="index.html">
-                Crown &amp; Quiver
+
+    <!-- Navigation -->
+    <header class="site-header">
+
+        <div class="container nav-wrapper">
+
+            <a
+                class="logo-text"
+                href="index.html"
+            >
+                Crown & Quiver
             </a>
-<button aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle">
+
+            <button
+                class="menu-toggle"
+                aria-expanded="false"
+                aria-label="Open navigation menu"
+            >
                 ☰
             </button>
-<nav class="site-nav">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="mission.html">Mission</a>
-<a href="rules.html">Rules</a>
-<a href="equipment.html">Equipment</a>
-<a href="activities.html">Activities</a>
-<a href="events.html">Events</a>
-<a href="news.html">News</a>
-<a href="gallery.html">Gallery</a>
-<a href="membership.html">Membership</a>
-<a href="contact.html">Contact</a>
-<a class="nav-button" href="registration.html">
+
+            <nav class="site-nav">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="mission.html">Mission</a>
+                <a href="rules.html">Rules</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="activities.html">Activities</a>
+                <a href="events.html">Events</a>
+                <a href="news.html">News</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="membership.html">Membership</a>
+                <a href="contact.html">Contact</a>
+
+                <a
+                    class="nav-button"
+                    href="registration.html"
+                >
                     Join Us
                 </a>
-</nav>
-</div>
-</header>
-<main>
-<!-- Events Hero -->
-<section class="page-hero">
-<div class="container page-hero-centered">
-<p class="eyebrow">
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- Events Hero -->
+        <section class="page-hero">
+
+            <div class="container page-hero-centered">
+
+                <p class="eyebrow">
                     APU Archery Club
                 </p>
-<h1>
+
+                <h1>
                     Upcoming Events
                 </h1>
-<p class="page-hero-description">
-                    Join Crown &amp; Quiver for archery experiences,
+
+                <p class="page-hero-description">
+                    Join Crown & Quiver for archery experiences,
                     friendly matches, workshops and club competitions.
                 </p>
-</div>
-</section>
-<!-- Event Cards -->
-<section class="section">
-<div class="container">
-<div class="section-heading">
-<p class="section-label">
+
+            </div>
+
+        </section>
+
+
+        <!-- Featured Event Countdown -->
+        <section class="section event-countdown-section">
+
+            <div class="container">
+
+                <div
+                    class="event-countdown"
+                    id="eventCountdown"
+                >
+
+                    <p class="section-label light-label">
+                        Next Featured Competition
+                    </p>
+
+                    <h2 id="eventCountdownTitle">
+                        Club Championship
+                    </h2>
+
+                    <p class="countdown-description">
+                        Countdown to the planned Crown & Quiver
+                        Club Championship on 25 October 2026.
+                    </p>
+
+
+                    <div class="countdown-grid">
+
+                        <div class="countdown-box">
+
+                            <span id="eventDays">
+                                00
+                            </span>
+
+                            <p>Days</p>
+
+                        </div>
+
+
+                        <div class="countdown-box">
+
+                            <span id="eventHours">
+                                00
+                            </span>
+
+                            <p>Hours</p>
+
+                        </div>
+
+
+                        <div class="countdown-box">
+
+                            <span id="eventMinutes">
+                                00
+                            </span>
+
+                            <p>Minutes</p>
+
+                        </div>
+
+
+                        <div class="countdown-box">
+
+                            <span id="eventSeconds">
+                                00
+                            </span>
+
+                            <p>Seconds</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <p
+                        class="countdown-complete-message"
+                        id="eventCountdownMessage"
+                    ></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Event Cards -->
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
                         Coming Up
                     </p>
-<h2>
+
+                    <h2>
                         Club Events
                     </h2>
-<p>
+
+                    <p>
                         Explore upcoming opportunities to learn,
                         practise and connect with other members.
                     </p>
-</div>
-<div class="events-grid">
-<!-- Beginner's Day -->
-<article class="event-page-card">
-<div class="event-image">
-<img alt="Beginner archery event" src="https://plus.unsplash.com/premium_photo-1718315735010-a382235a28b7?q=80&amp;w=1170&amp;auto=format&amp;fit=crop"/>
-<div class="date-badge">
-<span class="date-day">15</span>
-<span>SEP</span>
-</div>
-</div>
-<div class="event-card-content">
-<span class="event-tag">
+
+                </div>
+
+
+                <div class="events-grid">
+
+                    <!-- Beginner's Day -->
+                    <article class="event-page-card">
+
+                        <div class="event-image">
+
+                            <img
+                                src="https://plus.unsplash.com/premium_photo-1718315735010-a382235a28b7?q=80&w=1170&auto=format&fit=crop"
+                                alt="Beginner archery event"
+                            >
+
+                            <div class="date-badge">
+
+                                <span class="date-day">
+                                    15
+                                </span>
+
+                                <span>SEP</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="event-card-content">
+
+                            <span class="event-tag">
                                 Beginner Event
                             </span>
-<h3>
+
+                            <h3>
                                 Beginner's Day
                             </h3>
-<p>
+
+                            <p>
                                 A special event for new archers to
                                 learn basic techniques, try shooting
                                 and experience archery.
                             </p>
-<p class="event-location">
+
+                            <p class="event-location">
                                 APU Sports Complex
                             </p>
 
-<div class="event-actions"><button class="btn btn-outline-dark view-more-btn" data-desc="A welcoming introductory event for students who want to experience archery. Participants can learn basic safety rules, shooting posture and beginner techniques in a friendly club environment." data-location="APU Sports Complex" data-time="15 September 2026" data-title="Beginner's Day" type="button">View Details</button><a class="btn btn-primary" href="registration.html">Register Now</a></div></div>
-</article>
-<!-- Intra-Club Friendly -->
-<article class="event-page-card">
-<div class="event-image">
-<img alt="Friendly archery competition" src="https://images.unsplash.com/photo-1712350840799-eed8c91053ce?q=80&amp;w=1170&amp;auto=format&amp;fit=crop"/>
-<div class="date-badge">
-<span class="date-day">28</span>
-<span>SEP</span>
-</div>
-</div>
-<div class="event-card-content">
-<span class="event-tag">
+
+                            <div class="event-actions">
+
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-dark view-more-btn"
+                                    data-title="Beginner's Day"
+                                    data-time="15 September 2026"
+                                    data-location="APU Sports Complex"
+                                    data-desc="A welcoming introductory event for students who want to experience archery. Participants can learn basic safety rules, shooting posture and beginner techniques in a friendly club environment."
+                                >
+                                    View Details
+                                </button>
+
+                                <a
+                                    class="btn btn-primary"
+                                    href="registration.html"
+                                >
+                                    Register Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Intra-Club Friendly -->
+                    <article class="event-page-card">
+
+                        <div class="event-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1712350840799-eed8c91053ce?q=80&w=1170&auto=format&fit=crop"
+                                alt="Friendly archery competition"
+                            >
+
+                            <div class="date-badge">
+
+                                <span class="date-day">
+                                    28
+                                </span>
+
+                                <span>SEP</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="event-card-content">
+
+                            <span class="event-tag">
                                 Friendly Competition
                             </span>
-<h3>
+
+                            <h3>
                                 Intra-Club Friendly
                             </h3>
-<p>
+
+                            <p>
                                 A friendly match among club members
                                 designed to build experience,
                                 sportsmanship and confidence.
                             </p>
-<p class="event-location">
+
+                            <p class="event-location">
                                 APU Sports Complex
                             </p>
 
-<div class="event-actions"><button class="btn btn-outline-dark view-more-btn" data-desc="A friendly match among Crown &amp; Quiver members designed to build competition experience, sportsmanship and confidence while allowing members to practise under match-style conditions." data-location="APU Sports Complex" data-time="28 September 2026" data-title="Intra-Club Friendly" type="button">View Details</button><a class="btn btn-primary" href="registration.html">Register Now</a></div></div>
-</article>
-<!-- Workshop -->
-<article class="event-page-card">
-<div class="event-image">
-<img alt="Archery workshop" src="https://images.unsplash.com/photo-1709568859072-17c8748a3f19?q=80&amp;w=1170&amp;auto=format&amp;fit=crop"/>
-<div class="date-badge">
-<span class="date-day">12</span>
-<span>OCT</span>
-</div>
-</div>
-<div class="event-card-content">
-<span class="event-tag">
+
+                            <div class="event-actions">
+
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-dark view-more-btn"
+                                    data-title="Intra-Club Friendly"
+                                    data-time="28 September 2026"
+                                    data-location="APU Sports Complex"
+                                    data-desc="A friendly match among Crown & Quiver members designed to build competition experience, sportsmanship and confidence while allowing members to practise under match-style conditions."
+                                >
+                                    View Details
+                                </button>
+
+                                <a
+                                    class="btn btn-primary"
+                                    href="registration.html"
+                                >
+                                    Register Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Archery Workshop -->
+                    <article class="event-page-card">
+
+                        <div class="event-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1709568859072-17c8748a3f19?q=80&w=1170&auto=format&fit=crop"
+                                alt="Archery workshop"
+                            >
+
+                            <div class="date-badge">
+
+                                <span class="date-day">
+                                    12
+                                </span>
+
+                                <span>OCT</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="event-card-content">
+
+                            <span class="event-tag">
                                 Workshop
                             </span>
-<h3>
+
+                            <h3>
                                 Archery Workshop
                             </h3>
-<p>
+
+                            <p>
                                 A workshop focused on developing
                                 archery techniques with guidance
                                 from experienced archers and coaches.
                             </p>
-<p class="event-location">
+
+                            <p class="event-location">
                                 APU Sports Complex
                             </p>
 
-<div class="event-actions"><button class="btn btn-outline-dark view-more-btn" data-desc="A practical workshop focused on improving archery technique with guidance from experienced archers and coaches. Members can develop shooting form, consistency, equipment awareness and confidence." data-location="APU Sports Complex" data-time="12 October 2026" data-title="Archery Workshop" type="button">View Details</button><a class="btn btn-primary" href="registration.html">Register Now</a></div></div>
-</article>
-<!-- Club Championship -->
-<article class="event-page-card">
-<div class="event-image">
-<img alt="Archery club championship" src="https://images.unsplash.com/photo-1781031324805-b7b00cd8fa3a?q=80&amp;w=1170&amp;auto=format&amp;fit=crop"/>
-<div class="date-badge">
-<span class="date-day">25</span>
-<span>OCT</span>
-</div>
-</div>
-<div class="event-card-content">
-<span class="event-tag">
+
+                            <div class="event-actions">
+
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-dark view-more-btn"
+                                    data-title="Archery Workshop"
+                                    data-time="12 October 2026"
+                                    data-location="APU Sports Complex"
+                                    data-desc="A practical workshop focused on improving archery technique with guidance from experienced archers and coaches. Members can develop shooting form, consistency, equipment awareness and confidence."
+                                >
+                                    View Details
+                                </button>
+
+                                <a
+                                    class="btn btn-primary"
+                                    href="registration.html"
+                                >
+                                    Register Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Club Championship -->
+                    <article class="event-page-card">
+
+                        <div class="event-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1781031324805-b7b00cd8fa3a?q=80&w=1170&auto=format&fit=crop"
+                                alt="Archery club championship"
+                            >
+
+                            <div class="date-badge">
+
+                                <span class="date-day">
+                                    25
+                                </span>
+
+                                <span>OCT</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="event-card-content">
+
+                            <span class="event-tag">
                                 Competition
                             </span>
-<h3>
+
+                            <h3>
                                 Club Championship
                             </h3>
-<p>
+
+                            <p>
                                 A club competition where members can
                                 demonstrate their progress and enjoy
                                 a friendly competitive experience.
                             </p>
-<p class="event-location">
+
+                            <p class="event-location">
                                 APU Sports Complex
                             </p>
 
-<div class="event-actions"><button class="btn btn-outline-dark view-more-btn" data-desc="A planned club competition where members can demonstrate their progress, practise scoring and enjoy a supportive competitive experience with other Crown &amp; Quiver members." data-location="APU Sports Complex" data-time="25 October 2026" data-title="Club Championship" type="button">View Details</button><a class="btn btn-primary" href="registration.html">Register Now</a></div></div>
-</article>
-</div>
-</div>
-</section>
-</main>
-<div aria-hidden="true" aria-labelledby="modalTitle" aria-modal="true" class="details-modal" id="detailsModal" role="dialog">
-<div class="details-modal-content">
-<button aria-label="Close event details" class="details-modal-close" id="closeModal" type="button">×</button>
-<p class="section-label">Event Details</p>
-<h2 id="modalTitle">Event Details</h2>
-<div class="modal-information">
-<p><strong>Date:</strong> <span id="modalTime"></span></p>
-<p><strong>Location:</strong> <span id="modalLocation"></span></p>
-</div>
-<p class="modal-description" id="modalDesc"></p>
-<a class="btn btn-primary" href="registration.html">Register for Event</a>
-</div>
-</div>
 
-<!-- Footer -->
-<footer class="site-footer">
-<div class="container footer-grid">
-<div>
-<h2 class="footer-logo">
-                    Crown &amp; Quiver
+                            <div class="event-actions">
+
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-dark view-more-btn"
+                                    data-title="Club Championship"
+                                    data-time="25 October 2026"
+                                    data-location="APU Sports Complex"
+                                    data-desc="A planned club competition where members can demonstrate their progress, practise scoring and enjoy a supportive competitive experience with other Crown & Quiver members."
+                                >
+                                    View Details
+                                </button>
+
+                                <a
+                                    class="btn btn-primary"
+                                    href="registration.html"
+                                >
+                                    Register Now
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Event Details Modal -->
+    <div
+        class="details-modal"
+        id="detailsModal"
+        aria-hidden="true"
+        aria-labelledby="modalTitle"
+        aria-modal="true"
+        role="dialog"
+    >
+
+        <div class="details-modal-content">
+
+            <button
+                type="button"
+                class="details-modal-close"
+                id="closeModal"
+                aria-label="Close event details"
+            >
+                &times;
+            </button>
+
+
+            <p class="section-label">
+                Event Details
+            </p>
+
+
+            <h2 id="modalTitle">
+                Event Details
+            </h2>
+
+
+            <div class="modal-information">
+
+                <p>
+                    <strong>Date:</strong>
+                    <span id="modalTime"></span>
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    <span id="modalLocation"></span>
+                </p>
+
+            </div>
+
+
+            <p
+                class="modal-description"
+                id="modalDesc"
+            ></p>
+
+
+            <a
+                class="btn btn-primary"
+                href="registration.html"
+            >
+                Register for Event
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h2 class="footer-logo">
+                    Crown & Quiver
                 </h2>
-<p>
-                    APU Archery Club<br/>
+
+                <p>
+                    APU Archery Club<br>
                     Asia Pacific University
                 </p>
-</div>
-<div>
-<h3>Explore</h3>
-<a href="about.html">About</a>
-<a href="activities.html">Activities</a>
-<a href="gallery.html">Gallery</a>
-<a href="membership.html">Membership</a>
-</div>
-<div>
-<h3>Connect</h3>
-<a href="contact.html">Contact</a>
-<a href="enquiry.html">Enquiry</a>
-<a href="feedback.html">Feedback</a>
-<a href="registration.html">Registration</a>
-</div>
-</div>
-<div class="container footer-bottom">
-<p>
-                © 2026 Crown &amp; Quiver
+
+            </div>
+
+
+            <div>
+
+                <h3>Explore</h3>
+
+                <a href="about.html">About</a>
+                <a href="activities.html">Activities</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="membership.html">Membership</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Connect</h3>
+
+                <a href="contact.html">Contact</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="registration.html">Registration</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 Crown & Quiver
             </p>
-<p>
+
+            <p>
                 AINT012-4-1 Internet Applications
             </p>
-</div>
-</footer>
-<!-- Back to Top -->
-<button aria-label="Back to top" class="back-to-top">
+
+        </div>
+
+    </footer>
+
+
+    <!-- Back to Top -->
+    <button
+        aria-label="Back to top"
+        class="back-to-top"
+    >
         ↑
     </button>
+
 </body>
+
 </html>

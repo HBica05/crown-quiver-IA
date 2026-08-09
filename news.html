@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>News | Crown & Quiver</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Shared JavaScript -->
+    <script defer src="js/main.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- ========================================
+         Navigation
+    ======================================== -->
+
+    <header class="site-header">
+
+        <div class="container nav-wrapper">
+
+            <a
+                href="index.html"
+                class="logo-text"
+            >
+                Crown & Quiver
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+
+            <nav class="site-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="mission.html">
+                    Mission
+                </a>
+
+                <a href="rules.html">
+                    Rules
+                </a>
+
+                <a href="equipment.html">
+                    Equipment
+                </a>
+
+                <a href="activities.html">
+                    Activities
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a href="news.html">
+                    News
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="membership.html">
+                    Membership
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a
+                    href="registration.html"
+                    class="nav-button"
+                >
+                    Join Us
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ========================================
+             News Hero
+        ======================================== -->
+
+        <section class="page-hero">
+
+            <div class="container page-hero-centered">
+
+                <p class="eyebrow">
+                    Crown & Quiver Updates
+                </p>
+
+                <h1>
+                    Club News
+                </h1>
+
+                <p class="page-hero-description">
+                    Stay updated with upcoming club activities,
+                    equipment announcements, competitions and
+                    membership opportunities.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             Search & Filters
+        ======================================== -->
+
+        <section class="news-tools-section">
+
+            <div class="container">
+
+                <div class="news-tools">
+
+                    <!-- Search -->
+                    <div class="news-search">
+
+                        <label
+                            for="newsSearch"
+                            class="news-search-label"
+                        >
+                            Search News
+                        </label>
+
+                        <input
+                            type="search"
+                            id="newsSearch"
+                            placeholder="Search news and announcements..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <!-- Filters -->
+                    <div
+                        class="news-filter-buttons"
+                        aria-label="News categories"
+                    >
+
+                        <button
+                            type="button"
+                            class="filter-btn active"
+                            data-filter="all"
+                        >
+                            All News
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-filter="equipment"
+                        >
+                            Equipment
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-filter="competitions"
+                        >
+                            Competitions
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-filter="recruitment"
+                        >
+                            Recruitment
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             News Articles
+        ======================================== -->
+
+        <section class="section news-page-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        Latest Updates
+                    </p>
+
+                    <h2>
+                        What's Happening
+                    </h2>
+
+                    <p>
+                        Browse planned announcements and upcoming
+                        developments for Crown & Quiver.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="news-page-grid"
+                    id="newsCardsContainer"
+                >
+
+                    <!-- ========================================
+                         Equipment News
+                    ======================================== -->
+
+                    <article
+                        class="news-page-card"
+                        data-category="equipment"
+                    >
+
+                        <span class="news-category">
+                            Equipment
+                        </span>
+
+
+                        <h3>
+                            New Equipment Arrival
+                        </h3>
+
+
+                        <p class="news-date">
+                            Scheduled: September 2026
+                        </p>
+
+
+                        <p class="card-description">
+                            New beginner and intermediate recurve
+                            bows and arrows are planned to be made
+                            available for upcoming member training
+                            sessions.
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-outline-dark view-more-btn"
+                            data-title="New Equipment Arrival & Setup"
+                            data-time="September 2026"
+                            data-location="Equipment Announcement"
+                            data-desc="Beginner and intermediate recurve bows and arrows are planned to be prepared for member training sessions. The equipment will support newcomers who do not yet own personal archery gear and will help members practise in a structured club environment."
+                        >
+                            Read More
+                        </button>
+
+                    </article>
+
+
+                    <!-- ========================================
+                         Competition News
+                    ======================================== -->
+
+                    <article
+                        class="news-page-card"
+                        data-category="competitions"
+                    >
+
+                        <span class="news-category">
+                            Competitions
+                        </span>
+
+
+                        <h3>
+                            National Open Preparation
+                        </h3>
+
+
+                        <p class="news-date">
+                            Planned Trials: October 2026
+                        </p>
+
+
+                        <p class="card-description">
+                            Proposed team selection trials will
+                            provide members with an opportunity
+                            to prepare for future competitive
+                            archery events.
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-outline-dark view-more-btn"
+                            data-title="National Open Preparation & Team Trials"
+                            data-time="October 2026"
+                            data-location="Competitions & Training"
+                            data-desc="Crown & Quiver plans to organise internal selection trials for members interested in developing their competitive archery skills. Selected participants may receive focused practice sessions in preparation for future competition opportunities."
+                        >
+                            Read More
+                        </button>
+
+                    </article>
+
+
+                    <!-- ========================================
+                         Recruitment News
+                    ======================================== -->
+
+                    <article
+                        class="news-page-card"
+                        data-category="recruitment"
+                    >
+
+                        <span class="news-category">
+                            Recruitment
+                        </span>
+
+
+                        <h3>
+                            Member Recruitment
+                        </h3>
+
+
+                        <p class="news-date">
+                            Planned: Registration Week 2026
+                        </p>
+
+
+                        <p class="card-description">
+                            Membership registration is planned
+                            to open for new and returning students
+                            interested in joining Crown & Quiver.
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-outline-dark view-more-btn"
+                            data-title="Semester 2 Member Recruitment"
+                            data-time="Registration Week 2026"
+                            data-location="Club Recruitment"
+                            data-desc="Crown & Quiver plans to welcome new members during the upcoming registration period. Beginners and experienced archers will be invited to join. No previous archery experience or personal equipment is required for introductory participation."
+                        >
+                            Read More
+                        </button>
+
+                    </article>
+
+                </div>
+
+
+                <!-- No Results -->
+                <div
+                    id="noResults"
+                    class="news-no-results"
+                    hidden
+                >
+
+                    <h3>
+                        No Results Found
+                    </h3>
+
+                    <p>
+                        No news articles match your current
+                        search or category.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         News Details Modal
+    ======================================== -->
+
+    <div
+        class="details-modal"
+        id="detailsModal"
+        aria-hidden="true"
+        aria-labelledby="modalTitle"
+        aria-modal="true"
+        role="dialog"
+    >
+
+        <div class="details-modal-content">
+
+            <button
+                type="button"
+                class="details-modal-close"
+                id="closeModal"
+                aria-label="Close news details"
+            >
+                &times;
+            </button>
+
+
+            <p class="section-label">
+                News Details
+            </p>
+
+
+            <h2 id="modalTitle">
+                News Details
+            </h2>
+
+
+            <div class="modal-information">
+
+                <p>
+                    <strong>Date:</strong>
+                    <span id="modalTime"></span>
+                </p>
+
+                <p>
+                    <strong>Category:</strong>
+                    <span id="modalLocation"></span>
+                </p>
+
+            </div>
+
+
+            <p
+                id="modalDesc"
+                class="modal-description"
+            ></p>
+
+
+            <a
+                href="membership.html"
+                class="btn btn-primary"
+            >
+                Explore Membership
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================
+         Footer
+    ======================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h2 class="footer-logo">
+                    Crown & Quiver
+                </h2>
+
+                <p>
+                    APU Archery Club<br>
+                    Asia Pacific University
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="activities.html">
+                    Activities
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="membership.html">
+                    Membership
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Connect
+                </h3>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="enquiry.html">
+                    Enquiry
+                </a>
+
+                <a href="feedback.html">
+                    Feedback
+                </a>
+
+                <a href="registration.html">
+                    Registration
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 Crown & Quiver
+            </p>
+
+            <p>
+                AINT012-4-1 Internet Applications
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Back to Top -->
+    <button
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+</body>
+
+</html>

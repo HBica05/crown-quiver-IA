@@ -56,7 +56,10 @@
                 <a href="membership.html">Membership</a>
                 <a href="contact.html">Contact</a>
 
-                <a href="registration.html" class="nav-button">
+                <a
+                    href="registration.html"
+                    class="nav-button"
+                >
                     Join Us
                 </a>
 
@@ -113,13 +116,91 @@
 
 
                 <!-- Target Graphic -->
-                <div class="target-graphic" aria-hidden="true">
+                <div
+                    class="target-graphic"
+                    aria-hidden="true"
+                >
 
                     <div class="target-ring target-ring-one"></div>
                     <div class="target-ring target-ring-two"></div>
                     <div class="target-ring target-ring-three"></div>
                     <div class="target-ring target-ring-four"></div>
                     <div class="target-centre"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Competition Countdown -->
+        <section class="section activity-countdown-section">
+
+            <div class="container">
+
+                <div class="activity-countdown">
+
+                    <p class="section-label light-label">
+                        Upcoming Competition
+                    </p>
+
+                    <h2>
+                        Crown & Quiver Autumn Open 2026
+                    </h2>
+
+                    <p class="countdown-description">
+                        Countdown to our planned autumn archery
+                        competition on 15 October 2026.
+                    </p>
+
+
+                    <div class="countdown-grid">
+
+                        <div class="countdown-box">
+
+                            <span id="activityDays">
+                                00
+                            </span>
+
+                            <p>Days</p>
+
+                        </div>
+
+
+                        <div class="countdown-box">
+
+                            <span id="activityHours">
+                                00
+                            </span>
+
+                            <p>Hours</p>
+
+                        </div>
+
+
+                        <div class="countdown-box">
+
+                            <span id="activityMinutes">
+                                00
+                            </span>
+
+                            <p>Minutes</p>
+
+                        </div>
+
+
+                        <div class="countdown-box">
+
+                            <span id="activitySeconds">
+                                00
+                            </span>
+
+                            <p>Seconds</p>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -185,7 +266,9 @@
                         </div>
 
                         <button
+                            type="button"
                             class="btn btn-primary view-more-btn"
+                            data-type="training"
                             data-title="Training Sessions"
                             data-time="Every Tuesday & Thursday | 6:00 PM – 8:00 PM"
                             data-location="APU Outdoor Archery Range"
@@ -228,7 +311,9 @@
                         </div>
 
                         <button
+                            type="button"
                             class="btn btn-primary view-more-btn"
+                            data-type="general"
                             data-title="Skill Workshops"
                             data-time="Last Saturday of Every Month | 10:00 AM – 1:00 PM"
                             data-location="APU Sports Complex"
@@ -272,7 +357,9 @@
                         </div>
 
                         <button
+                            type="button"
                             class="btn btn-primary view-more-btn"
+                            data-type="general"
                             data-title="Team Building & Social Activities"
                             data-time="Once a Month | Time Announced Before Each Activity"
                             data-location="APU Campus"
@@ -320,6 +407,7 @@
 
                 </div>
 
+
                 <div class="quote-card">
 
                     <p>
@@ -345,11 +433,15 @@
         class="details-modal"
         id="detailsModal"
         aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
     >
 
         <div class="details-modal-content">
 
             <button
+                type="button"
                 class="details-modal-close"
                 id="closeModal"
                 aria-label="Close activity details"
@@ -357,13 +449,16 @@
                 &times;
             </button>
 
+
             <p class="section-label">
                 Activity Details
             </p>
 
+
             <h2 id="modalTitle">
                 Activity Details
             </h2>
+
 
             <div class="modal-information">
 
@@ -379,10 +474,71 @@
 
             </div>
 
+
             <p
                 id="modalDesc"
                 class="modal-description"
             ></p>
+
+
+            <!-- Training Schedule -->
+            <div
+                id="modalTableContainer"
+                class="practice-schedule-wrapper"
+            >
+
+                <h3>
+                    Weekly Practice Schedule
+                </h3>
+
+
+                <div class="table-scroll">
+
+                    <table class="practice-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Day</th>
+                                <th>Time</th>
+                                <th>Level</th>
+                                <th>Focus Area</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>6:00 PM – 8:00 PM</td>
+                                <td>Beginner / All</td>
+                                <td>Safety, Stance & Form</td>
+                            </tr>
+
+                            <tr>
+                                <td>Thursday</td>
+                                <td>6:00 PM – 8:00 PM</td>
+                                <td>Intermediate</td>
+                                <td>Grouping & Sight Tuning</td>
+                            </tr>
+
+                            <tr>
+                                <td>Saturday</td>
+                                <td>10:00 AM – 1:00 PM</td>
+                                <td>Advanced / Team</td>
+                                <td>Scoring & Competition Drills</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
 
             <a
                 href="registration.html"

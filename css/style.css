@@ -3048,3 +3048,207 @@ body.modal-open {
     }
 
 }
+/* ========================================
+   Rules Page
+======================================== */
+
+.rules-page-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 22px;
+}
+
+
+.rule-card {
+    position: relative;
+
+    padding: 30px;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.rule-number {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
+
+    color:
+        var(--pink-dark);
+
+    letter-spacing:
+        0.08em;
+}
+
+
+.rule-card h3 {
+    margin-bottom: 12px;
+}
+
+
+.rule-card p {
+    margin-bottom: 0;
+
+    color:
+        var(--muted-text);
+}
+
+
+@media (max-width: 700px) {
+
+    .rules-page-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+/* ========================================
+   Equipment Page
+======================================== */
+
+.equipment-page-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 25px;
+}
+
+
+.equipment-page-card {
+    overflow: hidden;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        transform 0.25s;
+}
+
+
+.equipment-page-card:hover {
+    transform:
+        translateY(-5px);
+}
+
+
+.equipment-page-image {
+    height: 230px;
+
+    overflow: hidden;
+
+    background:
+        var(--cream-dark);
+}
+
+
+.equipment-page-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.35s;
+}
+
+
+.equipment-page-card:hover
+.equipment-page-image img {
+    transform:
+        scale(1.04);
+}
+
+
+.equipment-page-content {
+    padding:
+        27px;
+}
+
+
+.equipment-number {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color:
+        var(--pink-dark);
+
+    font-weight: 600;
+
+    letter-spacing:
+        0.08em;
+}
+
+
+.equipment-page-content h3 {
+    margin-bottom: 12px;
+}
+
+
+.equipment-page-content p {
+    margin-bottom: 0;
+
+    color:
+        var(--muted-text);
+}
+
+
+/* Equipment Responsive */
+
+@media (max-width: 900px) {
+
+    .equipment-page-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .equipment-page-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .equipment-page-image {
+        height: 250px;
+    }
+
+}
